@@ -47,42 +47,155 @@ body {
     padding: 80px;
 }
 
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Hero left text */
+.hero-left {
+    max-width: 600px;
+}
+
+/* Hero image on the right */
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img {
+    width: 450px;
+    height: 450px;
+    border-radius: 70%;
+    object-fit: cover;
+    border: 3px solid #ff4da6;
+}
+
+/* Hero text styling */
 .hero h1 {
     font-size: 60px;
+}
+
+.hero h2 {
+    font-size: 36px;
 }
 
 .hero span {
     color: #ff4da6;
 }
 
+.hero-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Hot Circle */
 .circle {
     border: 1px solid #ff4da6;
     color: #ff4da6;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 60%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin-right: 10px;
 }
-
 /* ABOUT */
 .about {
     padding: 80px;
+    background: #0f0f0f; /* slightly different dark for contrast */
 }
 
 .about-container {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
     align-items: center;
 }
 
+/* Circular Image */
 .about img {
-    width: 100%;
-    border-radius: 20px;
+    width: 450px;
+    height: 450px;
+    border-radius: 70%;
+    object-fit: cover;
+    border: 4px solid #ff4da6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Hover effect on image */
+.about img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff4da6;
+}
+
+/* About text box */
+.about-box h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+
+/* Accent underline for heading */
+.about-box h2 span {
+    color: #ff4da6;
+}
+
+.about-box h2::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #ff4da6;
+    display: block;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+/* Paragraph styling */
+.about-box p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+/* Stats section */
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.stats div h3 {
+    font-size: 28px;
+    color: #ff4da6;
+}
+
+.stats div p {
+    color: #aaa;
+    font-size: 16px;
+}
+
+/* Get in Touch Button */
+.about-box .btn {
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.about-box .btn:hover {
+    background: transparent;
+    color: #ff4da6;
+    border: 2px solid #ff4da6;
+}
+
 
 /* PROJECTS */
 .projects {
